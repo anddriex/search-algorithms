@@ -126,7 +126,7 @@ def draw_square(node_id, vertexMidPointsDict, color="medium sea green", scale=1,
     x, y = vertexMidPointsDict[node_id]
     ts.goto(x, y)
     if text != None:
-        ts.write(str(text), font=("Arial", 20, "normal"))
+        ts.write(str(text), font=("Arial", 12, "normal"))
 
 
 def pathfromOrigin(origin, n, parents):
@@ -194,9 +194,6 @@ def aStar(graph, vertexMidPointsDict, start, goal):
                 priority = newCost + heuristic(successor)
                 openL.append((successor, priority))
                 parents[successor] = current
-
-        print('open list',openL)
-
     return parents
 
 
